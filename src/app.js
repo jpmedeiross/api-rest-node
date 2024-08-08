@@ -2,12 +2,13 @@ import express from 'express'
 import SelecaoController from './app/controllers/SelecaoController.js'
 
 const app = express()
-
+//rotas
 app.use(express.json())
 app.get('/selecoes', SelecaoController.index)
 app.get('/selecoes/:id', SelecaoController.show)
 app.post('/selecoes', SelecaoController.store)
 app.delete('/selecoes/:id', SelecaoController.delete)
 app.put('/selecoes/:id', SelecaoController.uptade)
+
 
 export default app
